@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Treat all HTML, CSS, and JS files as JavaScript
+*.html linguist-language=JavaScript
+*.css linguist-language=JavaScript
+*.js linguist-language=JavaScript
