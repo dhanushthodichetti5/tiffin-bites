@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+/*!Home Page Start from here */
+#home_page{
+    /* border: 2px solid red; */
+    height: 100vh;
+    background-image: url("./Assets/Tiffin-Background.png");
+    background-size: cover;
+}
+nav{
+    /* border: 2px solid black; */
+    color: white;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.652);
+}
+#nav_one{
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    font-size: 32px;
+    text-shadow: 2px 2px 1px black;
+}
+#nav_two{
+    flex-basis: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+#nav_two a{
+    color: white;
+    text-decoration:none;
+    padding: 15px 2px;
+}
+#nav_two a:hover{
+    color: orange;
+    transition: all 0.3s ease-in 0s;
+}
+#nav_three{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 15%;
+    gap:25px;
+}
+#nav_three article{
+    position: relative;
+}
+#cart_icon{
+    font-size: 25px;
+
+}
+#quantity{
+    height: 17px;
+    width: 17px;
+    background-color: white;
+    font-size: 13px;
+    color: black;
+    border-radius:50% ;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:-13px;
+    left:22px;
+}
+#price{
+    font-size: 16px;
+}
+
+header{
+    /* border: 2px solid green; */
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 1px black;
+    height: 85vh;
+    background-color: rgba(0, 0, 0, 0.419);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:30px;
+}
+#explore_btn{
+    color: white;
+    background-color: orange;
+    border: 0px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#explore_btn:hover{
+    scale: 1.05;
+}
+
+/*!Responsiveness for Homepage starts from here */
+@media (min-width:320px) and (max-width:425px) {
+    *{
+        box-sizing: border-box;
+        margin: 0;
+    }
+    nav{
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #nav_one{
+        flex-basis: 30%;
+        margin: 0px;
+    }
+    #logo{
+        font-size: 40px;
+    }
+    #nav_two{
+        flex-basis: 30%;
+    }
+    #nav_three{
+        flex-basis: 40%;
+    }
+    header{
+        gap:20px
+    }
+    #tagline{
+        font-size: 30px;
+    }
+    #explore_btn{
+        height: 40px;
+        width: 110px;
+    }
+}
+
+/*!Cart pop-up starts from here */
+main{
+    height:100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+#popup_container{
+    width:400px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#popup_container>h2{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#close_btn{
+    background-color: #f03c14;
+    color: white;
+    height: 30px;
+    width: 100%;
+    border: none;
+}
+#cart_details{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    overflow:auto;
+    scrollbar-width: none;
+    max-height: 400px;
+}
+.cart_container{
+    display: grid;
+    grid-template-columns: auto 150px 40px auto;
+    align-items: center;
+    gap:15px;
+}
+.cart_img{
+    height:50px;
+    width:50px;
+    display: inline;
+}
+.cart_title{
+    display: inline;
+    font-size: 20px;
+}
+.cart_quantity{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}
+
+/*!Menu page starts from here*/
+#menu_page{
+    /* border: 2px solid black; */
+}
+#menu_one{
+    padding: 50px;
+    height: 15vh;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+#menu_one>h2{
+    font-size: 35px;
+    text-shadow: 2px 2px 10px grey;
+}
+#search_field{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width:260px;
+    padding: 10px 20px;
+    border: 0px;
+    border-radius:5px;
+}
+#search_field:focus{
+    outline: 2px solid orange;
+}
+
+#menu_two{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.card_container{
+    margin: 20px 50px 40px 50px;
+    height:320px;
+    width:210px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #efefefad;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card_container:hover{
+    scale: 1.1;
+    transition: all 0.2s ease-in-out ;
+}
+.food_img{
+    padding: 0px 10px;
+    height: 170px;
+    width: 100%;
+    border-radius: 20px 20px;
+}
+.food_price{
+    color: orange;
+}
+.food_quantity{
+    width:80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 10px 0px;
+}
+.quantity_btn,.cart_btn{
+    background-color: orange;
+    color: white;
+    font-size: 15px;
+    height: 22px;
+    width: 22px;
+    border: 0px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+/*!Responsiveness for Menu_page starts from here */
+@media (min-width:320px) and (max-width:425px) {
+    #menu_one{
+        background-color: white;
+        padding:0px 10px;
+        width: 100%;
+        height: 15vh;
+        justify-content:space-between;
+    }
+    #menu_one h2{
+        font-size: 30px;
+    }
+    #menu_one input{
+        width: 200px;
+    }
+    #menu_two{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*! About Page Starts From Here */
+#about_page{
+    height: 100vh;
+    display: flex;
+}
+#about_one{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about_img{
+    height: 500px;
+    width: 550px;
+    border-radius: 25px;
+}
+
+#about_two{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+    margin-top: 72px;
+}
+#about_us{
+    color: rgb(166, 32, 9);
+    width: 100%;
+    text-align: start;
+    font-size: 35px;
+    text-shadow: 2px 2px 50px black;
+}
+.about_paras{
+    width: 100%;
+    font-size: 18px;
+}
+#about_para3,#about_para4{
+    text-align: center;
+}
+#testimonal{
+    background-color: #efefef;
+    border-left:5px solid rgb(166, 32, 9);
+    border-radius: 10px;
+    padding: 10px;
+}
+#social_media_icons{
+    display: flex;
+    font-size: 18px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+.icon{
+    color: white;
+    background-color: orange;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/*!Responsiveness for About_page starts from here */
+@media (min-width:320px) and (max-width:425px) {
+    #about_page{
+        margin-top: 20px;
+        height: auto;
+        flex-direction: column;
+    }
+    #about_one img{
+        height: 50vh;
+        width: 95vw;
+    }
+    #about_two{
+        margin: 40px 20px;
+        gap:30px;
+    }
+}
+
+/*!Feedback Page Starts From Here */
+#feedback_one{
+    /* border: 1px solid blue; */
+    height: 15vh;
+    color: white;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+#feedback_one>h3{
+    font-size: 32px;
+    text-shadow:2px 2px 10px black ;
+}
+#feedback_two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+#feedback_two>h3{
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(176, 6, 6)
+}
+#feedback_two>form{
+    height: 80vh;
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: #efefef54;
+}
+.form_fields{
+    width: 88%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap:5px;
+}
+.form_fields>input,.form_fields>select,.form_fields>textarea{
+    width:95%;
+    border-radius:5px ;
+    padding-left: 10px;
+    border: 1px solid black;
+}
+.form_fields>input,.form_fields>select{
+    height: 35px;
+}
+.form_fields>textarea{
+    padding-top:5px ;
+}
+input[type="submit"]{
+    color: white;
+    background-color: orange;
+    border: 0px;
+}
+#feedback_three{
+    height: 20vh;
+    color: white;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+#feedback_three>p>i{
+    color: rgb(217, 45, 74);
+}
+
+/*!Responsiveness for Feedback_page starts from here */
+@media (min-width:320px) and (max-width:425px){
+    #feedback_two>form{
+        width: 80vw;
+    }
+} 
+
+/*!Enhancements */
+#nav_two li{
+    list-style: none;
+}
+#nav_two ul{
+    padding-left: 0px;
+}
+.has_children{
+    position: relative;
+}
+.has_children ul{
+    display: none;
+}
+.has_children:hover ul{
+    display: block;
+    position: absolute;
+    left:0px;
+    padding-left: 0px;
+    padding:5px;
+}  
+.has_children li{
+    padding:8px 15px;
+    background-color: black;
+}

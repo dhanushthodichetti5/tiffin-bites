@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiffinBites</title>
+    <link rel="icon" href="./Assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--!HOME PAGE STARTS HERE -->
+    <section id="home_page">
+        <nav>
+            <aside id="nav_one">
+                <h2 id="logo">TiffinBites</h2>
+            </aside>
+            <aside id="nav_two">
+                <a href="#menu_page">Menu</a>
+                <a href="#about_page">About</a>
+                <a href="#feedback_page">Feedback</a>
+                <ul>
+                    <li class="has_children">
+                        <a href="#">List</a>
+                        <ul>
+                            <li><a href="#">One</a></li>
+                            <li><a href="#">Two</a></li>
+                            <li><a href="#">Three</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <aside id="nav_three">
+                <article>
+                    <i class="ri-shopping-cart-2-line" id="cart_icon"></i>
+                    <div id="quantity">0</div>
+                </article>
+                <p id="price">₹0.00</p>
+            </aside>
+        </nav>
+        <header>
+            <h1 id="tagline">
+                Fuel Your Day with
+                <br>
+                 Flavourful Tiffins!
+            </h1>
+            <button id="explore_btn">Explore Menu</button>
+        </header>
+    </section>
+
+    <!--!Cart pop-up starts from here-->
+    <main>
+        <section id="popup_container">
+            <h2>Your Order Summary</h2>
+            <div id="cart_details">No items in the cart</div>
+            <hr>
+            <p id="cart_total_items">Total Items:<span>0</span></p>
+            <p id="cart_total_price">Total Items:₹<span>0.00</span></p>
+            <button id="close_btn">Close</button>
+        </section>
+    </main>
+
+    <!--!MENU PAGE STARTS HERE -->
+    <section id="menu_page">
+        <aside id="menu_one">
+            <h2>Menu</h2>
+            <input type="text" name="search_field" id="search_field" placeholder="Search Tiffins...">
+        </aside>
+        <aside id="menu_two">
+            <article class="card_container" id="idli">
+                <img src="./Assets/Idli.png" alt="Idli" class="food_img">
+                <h2 class="food_title">Idli</h2>
+                <h4 class="food_price">₹30</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="bonda">
+                <img src="./Assets/Bonda.avif" alt="Bonda" class="food_img">
+                <h2 class="food_title">Bonda</h2>
+                <h4 class="food_price">₹30</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="ghee_dosa">
+                <img src="./Assets/GheeKaramDosa.jpg" alt="Ghee dosa" class="food_img">
+                <h2 class="food_title">Ghee Dosa</h2>
+                <h4 class="food_price">₹60</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="masala_dosa">
+                <img src="./Assets/MasalaDosa.png" alt="Masala Dosa" class="food_img">
+                <h2 class="food_title">Masala Dosa</h2>
+                <h4 class="food_price">₹30</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="vada">
+                <img src="./Assets/MeduVada.png" alt="Vada" class="food_img">
+                <h2 class="food_title">Vada</h2>
+                <h4 class="food_price">₹40</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="pesarattu">
+                <img src="./Assets/pesarattu.jpg" alt="Pesarattu" class="food_img">
+                <h2 class="food_title">Pesarattu</h2>
+                <h4 class="food_price">₹50</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="poha">
+                <img src="./Assets/Poha.jpg" alt="Poha" class="food_img">
+                <h2 class="food_title">Poha</h2>
+                <h4 class="food_price">₹30</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="pongal">
+                <img src="./Assets/Pongal.jpg" alt="Pongal" class="food_img">
+                <h2 class="food_title">Pongal</h2>
+                <h4 class="food_price">₹50</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="puri">
+                <img src="./Assets/puri.webp" alt="Puri" class="food_img">
+                <h2 class="food_title">Puri</h2>
+                <h4 class="food_price">₹30</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="ravva_dosa">
+                <img src="./Assets/RavaDosa.jpg" alt="Ravva Dosa" class="food_img">
+                <h2 class="food_title">Ravva Dosa</h2>
+                <h4 class="food_price">₹25</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="upma">
+                <img src="./Assets/Upma.png" alt="Upma" class="food_img">
+                <h2 class="food_title">Upma</h2>
+                <h4 class="food_price">₹25</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+            <article class="card_container" id="utappam">
+                <img src="./Assets/uttapam.jpg" alt="Utappam" class="food_img">
+                <h2 class="food_title">Utappam</h2>
+                <h4 class="food_price">₹30</h4>
+                <div class="food_quantity">
+                    <button class="quantity_btn">-</button>
+                    <span>0</span>
+                    <button class="quantity_btn">+</button>
+                </div>
+            </article>
+        </aside>
+    </section>
+
+    <!--!About Page Starts From Here -->
+    <section id="about_page">
+        <aside id="about_one">
+            <img src="./Assets/Tiffin-Background.png" alt="About_Img" id="about_img">
+        </aside>
+        <aside id="about_two">
+            <h2 id="about_us">About Us</h2>
+            <p id="about_para1" class="about_paras">
+                <b>Welcome to TiffinBites,</b> your go-to destination for authentic South Indian flavors in the heart of Hyderabad! We serve delicious home-style meals made fresh every day.
+            </p>
+            <p id="about_para2" class="about_paras">
+                Our Story: Born out of a love for traditional food, TiffinBites began as a small family-run venture aiming to bring homely and hygienic tiffin to busy working professionals and students.
+            </p>
+            <p id="about_para3" class="about_paras">
+                <b>Timings: 7:00 AM - 10:00 PM (All days)</b>
+            </p>
+            <p id="about_para4" class="about_paras">
+                <b>Location: Chaitanyapuri, Hyderabad, Telangana, India</b>
+            </p>
+            <article id="testimonal">
+                “We care about your hunger as much as we care about taste. One bite at a time, we make your day better!” 
+            </article>
+            <article id="social_media_icons">
+                <div class="icon">
+                    <i class="ri-facebook-line"></i>
+                </div>
+                <div class="icon">
+                    <i class="ri-instagram-line"></i>
+                </div>
+                <div class="icon">
+                    <i class="ri-whatsapp-line"></i>
+                </div>
+            </article>
+        </aside>
+    </section>
+
+    <!--!Feedback Page Starts From Here -->
+    <section id="feedback_page">
+        <aside id="feedback_one">
+            <h3>TiffinBites</h3>
+            <p>Your feedback helps us to serve you better!</p>
+        </aside>
+        <aside id="feedback_two">
+            <h3>Feedback Form</h3>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="Your_Key">
+                <div class="form_fields">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form_fields">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form_fields">
+                    <label for="ratings">Ratings</label>
+                    <select name="ratings" id="ratings">
+                        <option selected disabled>Choose ratings</option>
+                        <option>5 (Excellent)</option>
+                        <option>4 (Good)</option>
+                        <option>3 (Average)</option>
+                        <option>2 (Bad)</option>
+                        <option>1 (Poor)</option>
+                    </select>
+                </div>
+                <div class="form_fields">
+                    <label for="comments">Comments</label>
+                    <textarea name="comments" id="comments" placeholder="Write your feedback here..." rows="5"></textarea>
+                </div>
+                <div class="form_fields">
+                    <input type="submit" value="Submit Feedback">
+                </div>
+            </form>
+        </aside>
+        <aside id="feedback_three">
+            <p>Made with <i class="ri-heart-3-line" id="heart"></i> by <a href="" style="text-decoration: none; color: white;">Dhanush</a></p>
+            <p>&copy; TiffinBites | All Rights Reserved</p>
+        </aside>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
