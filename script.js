@@ -101,68 +101,6 @@ cartContainer.addEventListener("click",(e)=>{
     e.stopPropagation()
 })
 
-/*
-let updateAddCart=(id,img,name,quantity,price)=>{
-    let cartItem=document.querySelector(`#cart_${id}`)
-    let cartContains=cartDetails.querySelector(".cart_container")
-    console.log(cartItem)
-    console.log(id)
-    if(cartItem==null&&cartContains==null){
-        cartDetails.innerHTML=`
-            <article class="cart_container" id="cart_${id}">
-                <img src="${img}" alt="${id}" class="cart_img">
-                <h2 class="cart_title">${name}</h2>
-                <span>${quantity}</span>
-                <h4 class="cart_price">₹${price}</h4>
-            </article>
-        `
-    }
-    else if(cartItem==null){
-        cartDetails.innerHTML+=`
-            <article class="cart_container" id="cart_${id}">
-                <img src="${img}" alt="${id}" class="cart_img">
-                <h2 class="cart_title">${name}</h2>
-                <span>${quantity}</span>
-                <h4 class="cart_price">₹${price}</h4>
-            </article>
-        `
-    }
-    else   
-        {
-        let cartPrice=cartItem.querySelector(`.cart_price`).innerText.replace("₹","")
-        console.log(cartPrice)
-        cartItem.innerHTML=`
-            <article class="cart_container" id="cart_${id}">
-                <img src="${img}" alt="${id}" class="cart_img">
-                <h2 class="cart_title">${name}</h2>
-                <span>${quantity}</span>
-                <h4 class="cart_price">₹${Number(cartPrice)+price}</h4>
-            </article>
-        `
-    }
-    // let cartContainers=document.querySelectorAll(".cart_container")
-    // cartContainers.forEach((card)=>{
-    //     let plusBtn=card.querySelectorAll(".cart_btn")[0]
-    //     let minusBtn=card.querySelectorAll(".cart_btn")[1]
-    //     console.log(plusBtn)
-    //     plusBtn.addEventListener("click",()=>{
-    //         cart[itemId].quantity++
-    //         itemQuantity.innerText=cart[itemId].quantity
-    //         totalQuantity++
-    //         totalPrice+=itemPrice
-    //         updateCart()
-    //         updateAddCart(cart[itemId].id,cart[itemId].img,cart[itemId].name,cart[itemId].quantity,cart[itemId].price)
-    //     })
-    // })
-    
-}
-*/
-
-//!26-06-2025 class
-// let cartDetails=document.getElementById("cart_details")
-// let cartTotalItems=document.querySelector("#cart_total_items>span")
-// let cartTotalPrice=document.querySelector("#cart_total_price>span")
-
 function renderCartDetails(){
     cartDetails.innerHTML=""
     let hasResults=false
